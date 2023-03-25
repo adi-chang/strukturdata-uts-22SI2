@@ -9,10 +9,14 @@ public class Soal_01 {
       int[] arr = {1, 9, 10, 3, 2, 5, 4, 7, 6, 8, 11, 13, 12, 14, 15};
 
       for (int x : arr) {
-         boolean prime = MyLibrary.isPrimeNumber(x);
-         boolean odd = MyLibrary.isOddNumber(x);
-         boolean even = MyLibrary.isEvenNumber(x);
-         System.out.println(String.format("n = %2d -> isPrime ? %s, isOdd ? %s, isEven ? %s", x, prime, odd, even));
+         String prime;
+         if (MyLibrary.isPrimeNumber(x))
+            prime =  "Ya"; 
+         else 
+            prime = "Tidak";
+         String odd = MyLibrary.isOddNumber(x) ? "Ya" : "Tidak";
+         String even = MyLibrary.isEvenNumber(x) ? "Ya" : "Tidak";
+         System.out.println(String.format("n = %2d \t->\t isPrime ? %-10s\tisOdd ? %-10s\tisEven ? %-10s", x, prime, odd, even));
       }
 
    }

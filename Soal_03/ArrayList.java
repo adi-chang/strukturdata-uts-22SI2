@@ -41,7 +41,11 @@ public class ArrayList {
    // pastikan idx1 dan idx2 adalah index yang valid
    // jika idx1 atau idx2 tidak valid, outputkan pesan error: "error: index swapping tidak valid"
    public void swap(int idx1, int idx2) {
-      // write your code here
+      if (isValidIndex(idx1) && isValidIndex(idx2)) {
+         int temp = get(idx1);
+         arr[idx1] = arr[idx2];
+         arr[idx2] = temp;
+      }
    }
 
 }
